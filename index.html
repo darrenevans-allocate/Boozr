@@ -190,6 +190,8 @@
            
             $("#rateBev").show();
             $("#ratBevPage").show();
+      
+         
 
         } else if (response.status === 'not_authorized') {
             $("#rateBev").hide();
@@ -215,6 +217,12 @@
     function checkLoginState() {
         FB.getLoginStatus(function (response) {
             statusChangeCallback(response);
+        });
+    }
+
+    function getFacebookName() {
+        FB.api('/me', function (response) {
+            return response.name;
         });
     }
 
