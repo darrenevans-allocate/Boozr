@@ -69,6 +69,11 @@
 			$('.box_skitter_slider').skitter({dots: true});
 			$('.box_skitter_slider_post').skitter({dots: true});
 		});
+		$(':radio').change(
+  function(){
+    $('.choice').text( $(this).val() + ' stars' );
+  } 
+)
 
 	</script>
 
