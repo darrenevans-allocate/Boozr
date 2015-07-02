@@ -33,7 +33,7 @@ public class RateBeverage : System.Web.Services.WebService {
             // Specify the query to be executed.
             command.CommandType = System.Data.CommandType.Text;
             command.CommandText =
-            string.Format("insert into Rating(PersonName,BeverageID,Rating,Location) values ('{0}',{1},{2},'{3}'",personName,beverageID,rating,locationName);
+            string.Format("insert into Rating(PersonName,BeverageID,Rating,Location) values ('{0}',{1},{2},'{3}')",personName,beverageID,rating,locationName);
 
             // Open connection to database.
             connection.Open();

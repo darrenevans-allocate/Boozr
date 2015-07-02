@@ -297,7 +297,7 @@
         };
 
         var jsonData = JSON.stringify(data);
-        var url = '@Href("~/RateBeverage.svc/Rate")';
+        var url = '@Href("http://boozr.azurewebsites.net/RateBeverage.asmx/Rate")';
 
         $.ajax({
             type: "POST",
@@ -450,8 +450,45 @@ _____________________________________________________________
                                                 <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
                                             </fieldset>
                                         </p>
+                                        <form target="_blank" action='http://boozr.azurewebsites.net/RateBeverage.asmx/Rate' method="POST">
+
+                                            <table cellspacing="0" cellpadding="4" frame="box" bordercolor="#dcdcdc" rules="none" style="border-collapse: collapse;">
+                                                <tr>
+                                                    <td background="#dcdcdc" style="border-right: 2px solid white;">Parameter</td>
+                                                    <td background="#dcdcdc">Value</td>
+                                                </tr>
+
+
+                                                <tr>
+                                                    <td style="color: #000000; font-weight: normal;">beverageID:</td>
+                                                    <td><input type="text" size="50" name="beverageID" /></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td style="color: #000000; font-weight: normal;">rating:</td>
+                                                    <td><input type="text" size="50" name="rating" /></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td style="color: #000000; font-weight: normal;">personName:</td>
+                                                    <td><input type="text" size="50" name="personName" /></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td style="color: #000000; font-weight: normal;">locationName:</td>
+                                                    <td><input type="text" size="50" name="locationName" /></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td></td>
+                                                    <td align="right"> <input type="submit" value="Invoke" class="button" /></td>
+                                                </tr>
+                                            </table>
+
+                                        </form>
 
                                     </div>
+                                    
 
                                     <div class="grid_3 bg_plus">
                                         <a class="video-crbox work_image" href="http://www.youtube.com/embed/5Cjrp23lBSM" rel="pf_item" title="Embed video.">
