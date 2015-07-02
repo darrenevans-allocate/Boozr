@@ -1204,7 +1204,7 @@ border-bottom: 1px dashed #ccc;
 }
 
 .rating:not(:checked) > label:before {
-    content: '? ';
+    content: '* ';
 }
 
 .rating > input:checked ~ label {
