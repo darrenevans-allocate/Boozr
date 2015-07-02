@@ -22,7 +22,7 @@ public class RateBeverage : System.Web.Services.WebService {
 
     [WebMethod]
     public void Rate(int beverageID,int rating,string personName, string locationName) {
-        string SQLConnectionString = "Server=tcp:bzkobrlh0s.database.windows.net,1433;Database=Boozr;User ID=Beerman@bzkobrlh0s;Password={your_password_here};Trusted_Connection=False;Encrypt=True;Connection Timeout=30;";
+        string SQLConnectionString = "Server=tcp:bzkobrlh0s.database.windows.net,1433;Database=Boozr;User ID=Beerman@bzkobrlh0s;Password=Getin123;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;";
         // Create a SqlConnection from the provided connection string.
         using (SqlConnection connection = new SqlConnection(SQLConnectionString))
         {
