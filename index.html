@@ -221,9 +221,9 @@
         });
     }
 
-    function getFacebookName() {
+    function getFacebookName() {      
         FB.api('/me', function (response) {
-            return response.name;
+            $("#FaceBookName").val(response.name);
         });
     }
 
@@ -296,7 +296,8 @@
         //    "PersonName": "Darren",
         //    "Location": ""
         //};
-        var name = getFacebookName();
+        getFacebookName();
+        var name = $("#FaceBookName").val();
         var bevid = $("#optBeverage").val();
         var loc = $("#locationName").val();
         if (loc === "")
@@ -304,7 +305,7 @@
         var data = {
             "beverageID": bevid,
             "rating": 5,
-            "personName": "fred", //name,
+            "personName": name,
             "locationName": loc
 
         };
@@ -474,6 +475,7 @@ _____________________________________________________________
                                         
                                                                    
                                         <input name="hidden" id="locationName" type="hidden"/>
+                                        <input name="fbname" id="FaceBookName" type="hidden" />
 
                                         
                                         <input name="Submit" type="submit" value="Rate" onclick="JavaScript: sumbitRating();" />
