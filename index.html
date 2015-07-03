@@ -88,6 +88,29 @@
 		  }
 		}
 
+		function RateBeverage() {
+		    //http://boozr.azurewebsites.net/RateBeverage.asmx/Rate
+
+		    var data = {
+		        beverageId: $("optBeverage").val(),
+                rating: $("")
+		}
+		    $.ajax({
+		        type: "POST",
+		        url: "http://boozr.azurewebsites.net/RateBeverage.asmx/Rate",
+		        data: JSON.stringify({ beverageId: 55, Rating: 5, PersonName: 'fredrik', locationName: 'uppsala' }),
+		        contentType: "application/json; charset=utf-8",
+		        dataType: "json",
+		        success: OnSuccess,
+		        failure: function (response) {
+		            alert(response.d);
+		        }
+		    });
+		}
+		function OnSuccess(response) {
+		    alert(response.d);
+		}
+
 		function createMarker(place) {
 		  var placeLoc = place.geometry.location;
 		  var marker = new google.maps.Marker({
@@ -289,12 +312,21 @@
         //    "Location": $("#publishInterval").val()
         //};
 
+        //var data = {
+        //    "BeverageName": "IPA",
+        //    "Rating": 1,
+        //    "PersonName": "Darren",
+        //    "Location": ""
+        //};
+        var name = getFacebookName();
+        var bevid = $("#optBeverage").val();
         var data = {
-            "BeverageName": "IPA",
-            "Rating": 1,
-            "PersonName": "Darren",
-            "Location": ""
+            beverageId: bevid,
+            rating: 5,
+            personName: name,
+            location: "xxx"
         };
+
 
         var jsonData = JSON.stringify(data);
         var url = '@Href("http://boozr.azurewebsites.net/RateBeverage.asmx/Rate")';
@@ -450,7 +482,7 @@ _____________________________________________________________
                                                 <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
                                             </fieldset>
                                         </p>
-                                        <select>
+                                        <select id="optBeverage">
                                             <option value="1">Rakia</option>
                                             <option value="2">IPA</option>
                                             <option value="3">Heiniken</option>
@@ -458,8 +490,10 @@ _____________________________________________________________
                                             <option value="5">Amstel</option>
                                             <option value="5">Foster's lager</option>
                                         </select>
-                                        <form target="_blank" action='http://boozr.azurewebsites.net/RateBeverage.asmx/Rate' method="POST">
-
+                                        <!--<form target="_blank" action='http://boozr.azurewebsites.net/RateBeverage.asmx/Rate' method="POST">-->
+                                        <form name="myform" onsubmit="JavaScript: sumbitRating()">
+                                            <input name="Submit" type="submit" value="Rate" onclick="JavaScript: sumbitRating()" />
+                                        </form>
                                             <table cellspacing="0" cellpadding="4" frame="box" bordercolor="#dcdcdc" rules="none" style="border-collapse: collapse;">
                                                 <tr>
                                                     <td background="#dcdcdc" style="border-right: 2px solid white;">Parameter</td>
