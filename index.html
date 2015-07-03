@@ -451,6 +451,21 @@ _____________________________________________________________
 
                                     <div class="grid_3 alpha">
                                         <p>
+                                            <select id="optBeverage">
+                                                <option value="1">IPA</option>
+                                                <option value="2">Heineken</option>
+                                                <option value="3">Amstel Bier</option>
+                                                <option value="4">Peroni</option>
+                                                <option value="5">Tiger</option>
+                                                <option value="6">Old Speckled Hen</option>
+                                                <option value="7">Soul</option>
+                                                <option value="8">Bulmers Apple</option>
+                                                <option value="9">Bulmers Pear</option>
+                                                <option value="10">Rakija</option>
+                                            </select>
+
+                                        </p>
+                                        <p style="">
                                             <fieldset class="rating">
                                                 <legend>Please rate:</legend>
                                                 <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
@@ -460,28 +475,15 @@ _____________________________________________________________
                                                 <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
                                             </fieldset>
                                         </p>
-                                        <select id="optBeverage">
-                                            <option value="1">IPA</option>
-                                            <option value="2">Heineken</option>
-                                            <option value="3">Amstel Bier</option>
-                                            <option value="4">Peroni</option>
-                                            <option value="5">Tiger</option>
-                                            <option value="6">Old Speckled Hen</option>
-                                            <option value="7">Soul</option>
-                                            <option value="8">Bulmers Apple</option>
-                                            <option value="9">Bulmers Pear</option>
-                                            <option value="10">Rakija</option>
-                                        </select>
                                         <!--<form target="_blank" action='http://boozr.azurewebsites.net/RateBeverage.asmx/Rate' method="POST">-->
 
                                         
-                                                                   
-                                        <input name="hidden" id="locationName" type="hidden"/>
-                                        <input name="fbname" id="FaceBookName" type="hidden" />
-                                        <input name="rate" id="RatingStore" type="hidden" />
-
-                                        
-                                        <input name="Submit" type="submit" value="Rate" onclick="JavaScript: sumbitRating();" />
+                                        <p style="margin-top:80px">                           
+                                            <input name="hidden" id="locationName" type="hidden"/>
+                                            <input name="fbname" id="FaceBookName" type="hidden" />
+                                            <input name="rate" id="RatingStore" type="hidden" />
+                                            <input name="Submit" type="submit" value="Rate" onclick="JavaScript: sumbitRating();" />
+                                        </p>
 
                                 </div>
                             </div>

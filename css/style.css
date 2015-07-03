@@ -479,7 +479,6 @@ ul.user_list li {
 ----------------------------------------------------------------------------------------------------*/
 
 .grid_2,
-.grid_3,
 .grid_4,
 .grid_5
  {
@@ -488,6 +487,14 @@ ul.user_list li {
   margin-left: 10px;
   margin-right: 10px;
 }
+
+.grid_3 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 
 .grid_1
  {
