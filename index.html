@@ -162,8 +162,10 @@
 			$('.box_skitter_slider_post').skitter({dots: true});
 		});
 		$(':radio').change(
-  function(){
-    $('.choice').text( $(this).val() + ' stars' );
+  function () {
+      var rate = $(this).val();
+      $('.choice').text($(this).val() + ' stars');
+      $('#RatingStore').val(rate);
   } 
 )
 
@@ -476,6 +478,7 @@ _____________________________________________________________
                                                                    
                                         <input name="hidden" id="locationName" type="hidden"/>
                                         <input name="fbname" id="FaceBookName" type="hidden" />
+                                        <input name="rate" id="RatingStore" type="hidden" />
 
                                         
                                         <input name="Submit" type="submit" value="Rate" onclick="JavaScript: sumbitRating();" />
