@@ -321,15 +321,15 @@
         var name = getFacebookName();
         var bevid = $("#optBeverage").val();
         var data = {
-            beverageId: bevid,
-            rating: 5,
-            personName: name,
-            location: "xxx"
+            "BeverageId": bevid,
+            "Rating": 5,
+            "PersonName": name,
+            "Location": "xxx"
         };
 
 
         var jsonData = JSON.stringify(data);
-        var url = '@Href("http://boozr.azurewebsites.net/RateBeverage.asmx/Rate")';
+        var url = "http://boozr.azurewebsites.net/RateBeverage.asmx/Rate";
 
         $.ajax({
             type: "POST",
