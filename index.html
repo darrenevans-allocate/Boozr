@@ -88,29 +88,6 @@
 		  }
 		}
 
-		function RateBeverage() {
-		    //http://boozr.azurewebsites.net/RateBeverage.asmx/Rate
-
-		    var data = {
-		        beverageId: $("optBeverage").val(),
-                rating: $("")
-		}
-		    $.ajax({
-		        type: "POST",
-		        url: "http://boozr.azurewebsites.net/RateBeverage.asmx/Rate",
-		        data: JSON.stringify({ beverageId: 55, Rating: 5, PersonName: 'fredrik', locationName: 'uppsala' }),
-		        contentType: "application/json; charset=utf-8",
-		        dataType: "json",
-		        success: OnSuccess,
-		        failure: function (response) {
-		            alert(response.d);
-		        }
-		    });
-		}
-		function OnSuccess(response) {
-		    alert(response.d);
-		}
-
 		function createMarker(place) {
 		  var placeLoc = place.geometry.location;
 		  var marker = new google.maps.Marker({
@@ -119,7 +96,8 @@
 		  });
 
 		  google.maps.event.addListener(marker, 'click', function() {
-			infowindow.setContent(place.name);
+		      $("#locationName").val(place.name);
+		      infowindow.setContent(place.name);
     			infowindow.open(map, this);
 			});
 		}
@@ -320,11 +298,14 @@
         //};
         var name = getFacebookName();
         var bevid = $("#optBeverage").val();
+        var loc = $("#locationName").val();
+        if (loc === "")
+            loc = "xxx";
         var data = {
-            "BeverageId": bevid,
-            "Rating": 5,
-            "PersonName": name,
-            "Location": "xxx"
+            "beverageID": bevid,
+            "rating": 5,
+            "personName": "fred", //name,
+            "locationName": loc
         };
 
 
@@ -483,18 +464,23 @@ _____________________________________________________________
                                             </fieldset>
                                         </p>
                                         <select id="optBeverage">
-                                            <option value="1">Rakia</option>
-                                            <option value="2">IPA</option>
-                                            <option value="3">Heiniken</option>
-                                            <option value="4">Kronenburg</option>
-                                            <option value="5">Amstel</option>
-                                            <option value="5">Foster's lager</option>
+                                            <option value="1">IPA</option>
+                                            <option value="2">Heineken</option>
+                                            <option value="3">Amstel Bier</option>
+                                            <option value="4">Peroni</option>
+                                            <option value="5">Tiger</option>
+                                            <option value="6">Old Speckled Hen</option>
+                                            <option value="7">Soul</option>
+                                            <option value="8">Bulmers Apple</option>
+                                            <option value="9">Bulmers Pear</option>
+                                            <option value="10">Rakija</option>
                                         </select>
                                         <!--<form target="_blank" action='http://boozr.azurewebsites.net/RateBeverage.asmx/Rate' method="POST">-->
-                                        <form name="myform" onsubmit="JavaScript: sumbitRating()">
-                                            <input name="Submit" type="submit" value="Rate" onclick="JavaScript: sumbitRating()" />
-                                        </form>
-                                           
+                                        
+
+                                        <input name="Submit" type="submit" value="Rate" onclick="JavaScript: sumbitRating()" />
+                               
+                                           <input name="hidden" id="locationName" type="hidden"/>
 
                                     </div>                                    
 
