@@ -302,15 +302,22 @@
         if (loc === "")
             loc = "xxx";
         var data = {
+<<<<<<< HEAD
             "beverageID": bevid,
             "rating": 5,
             "personName": "fred", //name,
             "locationName": loc
+=======
+            beverageId: bevid,
+            rating: 5,
+            personName: name,
+            location: "xxx"
+>>>>>>> origin/master
         };
 
 
         var jsonData = JSON.stringify(data);
-        var url = "http://boozr.azurewebsites.net/RateBeverage.asmx/Rate";
+        var url = '@Href("http://boozr.azurewebsites.net/RateBeverage.asmx/Rate")';
 
         $.ajax({
             type: "POST",
@@ -476,13 +483,62 @@ _____________________________________________________________
                                             <option value="10">Rakija</option>
                                         </select>
                                         <!--<form target="_blank" action='http://boozr.azurewebsites.net/RateBeverage.asmx/Rate' method="POST">-->
+<<<<<<< HEAD
                                         
 
                                         <input name="Submit" type="submit" value="Rate" onclick="JavaScript: sumbitRating()" />
                                
                                            <input name="hidden" id="locationName" type="hidden"/>
+=======
+                                        <form name="myform" onsubmit="JavaScript: sumbitRating()">
+                                            <input name="Submit" type="submit" value="Rate" onclick="JavaScript: sumbitRating()" />
+                                        </form>
+                                            <table cellspacing="0" cellpadding="4" frame="box" bordercolor="#dcdcdc" rules="none" style="border-collapse: collapse;">
+                                                <tr>
+                                                    <td background="#dcdcdc" style="border-right: 2px solid white;">Parameter</td>
+                                                    <td background="#dcdcdc">Value</td>
+                                                </tr>
 
-                                    </div>                                    
+
+                                                <tr>
+                                                    <td style="color: #000000; font-weight: normal;">beverageID:</td>
+                                                    <td><input type="text" size="50" name="beverageID" /></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td style="color: #000000; font-weight: normal;">rating:</td>
+                                                    <td><input type="text" size="50" name="rating" /></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td style="color: #000000; font-weight: normal;">personName:</td>
+                                                    <td><input type="text" size="50" name="personName" /></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td style="color: #000000; font-weight: normal;">locationName:</td>
+                                                    <td><input type="text" size="50" name="locationName" /></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td></td>
+                                                    <td align="right"> <input type="submit" value="Invoke" class="button" /></td>
+                                                </tr>
+                                            </table>
+>>>>>>> origin/master
+
+                                        </form>
+
+                                    </div>
+                                    
+
+                                    <!--div class="grid_3 bg_plus">
+                                        <a class="video-crbox work_image" href="http://www.youtube.com/embed/5Cjrp23lBSM" rel="pf_item" title="Embed video.">
+                                            <img src="images/assets/12.jpg" alt="" /-->
+                                        </a>
+                                        <!--h3>Project title</h3>
+                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p-->
+                                    </div>
 
                                     <div class="grid_3 bg_plus omega">
                                         <a href="http://google.com" rel="pf_item" class="iframe-crbox work_image" title="IFrame website">
@@ -612,24 +668,24 @@ _____________________________________________________________
                                         <a href="images/assets/0022.jpg" rel="pf_item" class="work_image" title="Project name">
                                             <img src="images/assets/16.jpg" alt="" />
                                         </a>
-                                        <h3>Project title</h3>
-                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p>
+                                        <!--h3>Project title</h3>
+                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p-->
                                     </div>
 
                                     <div class="grid_3 bg_plus">
-                                        <a href="images/assets/0044.jpg" rel="pf_item" class="work_image" title="Project name">
-                                            <img src="images/assets/1.jpg" alt="" />
+                                        <!--a href="images/assets/0044.jpg" rel="pf_item" class="work_image" title="Project name">
+                                            <img src="images/assets/1.jpg" alt="" /-->
                                         </a>
-                                        <h3>Project title</h3>
-                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p>
+                                        <!--h3>Project title</h3>
+                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p-->
                                     </div>
 
                                     <div class="grid_3 bg_plus omega">
-                                        <a href="images/assets/0055.jpg" rel="pf_item" class="work_image" title="Project name">
-                                            <img src="images/assets/4.jpg" alt="" />
+                                        <!--a href="images/assets/0055.jpg" rel="pf_item" class="work_image" title="Project name">
+                                            <img src="images/assets/4.jpg" alt="" /-->
                                         </a>
-                                        <h3>Project title</h3>
-                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p>
+                                        <!--h3>Project title</h3>
+                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p-->
                                     </div>
                                     <div class="clear"></div>
                                     <!--======= THIRD ROW ========-->
@@ -643,53 +699,53 @@ _____________________________________________________________
                                 <div class="portfolio">
 
                                     <div class="grid_3 bg_plus alpha">
-                                        <a href="images/assets/0022.jpg" rel="pf_item" class="work_image" title="Project name">
-                                            <img src="images/assets/14.jpg" alt="" />
+                                        <!--a href="images/assets/0022.jpg" rel="pf_item" class="work_image" title="Project name">
+                                            <img src="images/assets/14.jpg" alt="" /-->
                                         </a>
-                                        <h3>Project title</h3>
-                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p>
+                                        <!--h3>Project title</h3>
+                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p-->
                                     </div>
 
                                     <div class="grid_3 bg_plus">
-                                        <a href="images/assets/0044.jpg" rel="pf_item" class="work_image" title="Project name">
-                                            <img src="images/assets/17.jpg" alt="" />
+                                        <!--a href="images/assets/0044.jpg" rel="pf_item" class="work_image" title="Project name">
+                                            <img src="images/assets/17.jpg" alt="" /-->
                                         </a>
-                                        <h3>Project title</h3>
-                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p>
+                                        <!--h3>Project title</h3>
+                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p-->
                                     </div>
 
                                     <div class="grid_3 bg_plus omega">
-                                        <a href="images/assets/0055.jpg" rel="pf_item" class="work_image" title="Project name">
-                                            <img src="images/assets/18.jpg" alt="" />
+                                        <!--a href="images/assets/0055.jpg" rel="pf_item" class="work_image" title="Project name">
+                                            <img src="images/assets/18.jpg" alt="" /-->
                                         </a>
-                                        <h3>Project title</h3>
-                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p>
+                                        <!--h3>Project title</h3>
+                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p-->
                                     </div>
                                     <div class="clear"></div>
                                     <!--======= FIRST ROW ========-->
 
                                     <div class="grid_3 bg_plus alpha">
-                                        <a href="images/assets/0022.jpg" rel="pf_item" class="work_image" title="Project name">
-                                            <img src="images/assets/19.jpg" alt="" />
+                                        <!--a href="images/assets/0022.jpg" rel="pf_item" class="work_image" title="Project name">
+                                            <img src="images/assets/19.jpg" alt="" /-->
                                         </a>
-                                        <h3>Project title</h3>
-                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p>
+                                        <!--h3>Project title</h3>
+                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p-->
                                     </div>
 
                                     <div class="grid_3 bg_plus">
-                                        <a href="images/assets/0044.jpg" rel="pf_item" class="work_image" title="Project name">
-                                            <img src="images/assets/20.jpg" alt="" />
+                                        <!--a href="images/assets/0044.jpg" rel="pf_item" class="work_image" title="Project name">
+                                            <img src="images/assets/20.jpg" alt="" /-->
                                         </a>
-                                        <h3>Project title</h3>
-                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p>
+                                        <!--h3>Project title</h3>
+                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p-->
                                     </div>
 
                                     <div class="grid_3 bg_plus omega">
-                                        <a href="images/assets/0055.jpg" rel="pf_item" class="work_image" title="Project name">
-                                            <img src="images/assets/21.jpg" alt="" />
+                                        <!--a href="images/assets/0055.jpg" rel="pf_item" class="work_image" title="Project name">
+                                            <img src="images/assets/21.jpg" alt="" /-->
                                         </a>
-                                        <h3>Project title</h3>
-                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p>
+                                        <!--h3>Project title</h3>
+                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p-->
                                     </div>
                                     <div class="clear"></div>
                                     <!--======= THIRD ROW ========-->
@@ -703,80 +759,80 @@ _____________________________________________________________
                                 <div class="portfolio">
 
                                     <div class="grid_3 bg_plus alpha">
-                                        <a href="images/assets/0022.jpg" rel="pf_item" class="work_image" title="Project name">
-                                            <img src="images/assets/22.jpg" alt="" />
+                                        <!--a href="images/assets/0022.jpg" rel="pf_item" class="work_image" title="Project name">
+                                            <img src="images/assets/22.jpg" alt="" /-->
                                         </a>
-                                        <h3>Project title</h3>
-                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p>
+                                        <!--h3>Project title</h3>
+                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p-->
                                     </div>
 
                                     <div class="grid_3 bg_plus">
-                                        <a href="images/assets/0044.jpg" rel="pf_item" class="work_image" title="Project name">
-                                            <img src="images/assets/23.jpg" alt="" />
+                                        <!--a href="images/assets/0044.jpg" rel="pf_item" class="work_image" title="Project name">
+                                            <img src="images/assets/23.jpg" alt="" /-->
                                         </a>
-                                        <h3>Project title</h3>
-                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p>
+                                        <!--h3>Project title</h3>
+                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p-->
                                     </div>
 
                                     <div class="grid_3 bg_plus omega">
-                                        <a href="images/assets/0055.jpg" rel="pf_item" class="work_image" title="Project name">
-                                            <img src="images/assets/1.jpg" alt="" />
+                                        <!--a href="images/assets/0055.jpg" rel="pf_item" class="work_image" title="Project name">
+                                            <img src="images/assets/1.jpg" alt="" /-->
                                         </a>
-                                        <h3>Project title</h3>
-                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p>
+                                        <!--h3>Project title</h3>
+                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p-->
                                     </div>
                                     <div class="clear"></div>
                                     <!--======= FIRST ROW ========-->
 
 
                                     <div class="grid_3 bg_plus alpha">
-                                        <a href="images/assets/0022.jpg" rel="pf_item" class="work_image" title="Project name">
-                                            <img src="images/assets/4.jpg" alt="" />
+                                        <!--a href="images/assets/0022.jpg" rel="pf_item" class="work_image" title="Project name">
+                                            <img src="images/assets/4.jpg" alt="" /-->
                                         </a>
-                                        <h3>Project title</h3>
-                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p>
+                                        <!--h3>Project title</h3>
+                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p-->
                                     </div>
 
                                     <div class="grid_3 bg_plus">
-                                        <a href="images/assets/0044.jpg" rel="pf_item" class="work_image" title="Project name">
-                                            <img src="images/assets/5.jpg" alt="" />
+                                        <!--a href="images/assets/0044.jpg" rel="pf_item" class="work_image" title="Project name">
+                                            <img src="images/assets/5.jpg" alt="" /-->
                                         </a>
-                                        <h3>Project title</h3>
-                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p>
+                                        <!--h3>Project title</h3>
+                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p-->
                                     </div>
 
                                     <div class="grid_3 bg_plus omega">
-                                        <a href="images/assets/0055.jpg" rel="pf_item" class="work_image" title="Project name">
-                                            <img src="images/assets/10.jpg" alt="" />
+                                        <!--a href="images/assets/0055.jpg" rel="pf_item" class="work_image" title="Project name">
+                                            <img src="images/assets/10.jpg" alt="" /-->
                                         </a>
-                                        <h3>Project title</h3>
-                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p>
+                                        <!--h3>Project title</h3>
+                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p-->
                                     </div>
                                     <div class="clear"></div>
                                     <!--======= SECOND ROW ========-->
 
                                     <div class="grid_3 bg_plus alpha">
-                                        <a href="images/assets/0022.jpg" rel="pf_item" class="work_image" title="Project name">
-                                            <img src="images/assets/12.jpg" alt="" />
+                                        <!--a href="images/assets/0022.jpg" rel="pf_item" class="work_image" title="Project name">
+                                            <img src="images/assets/12.jpg" alt="" /-->
                                         </a>
-                                        <h3>Project title</h3>
-                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p>
+                                        <!--h3>Project title</h3>
+                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p-->
                                     </div>
 
                                     <div class="grid_3 bg_plus">
-                                        <a href="images/assets/0044.jpg" rel="pf_item" class="work_image" title="Project name">
-                                            <img src="images/assets/15.jpg" alt="" />
+                                        <!--a href="images/assets/0044.jpg" rel="pf_item" class="work_image" title="Project name">
+                                            <img src="images/assets/15.jpg" alt="" /-->
                                         </a>
-                                        <h3>Project title</h3>
-                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p>
+                                        <!--h3>Project title</h3>
+                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p-->
                                     </div>
 
                                     <div class="grid_3 bg_plus omega">
-                                        <a href="images/assets/0055.jpg" rel="pf_item" class="work_image" title="Project name">
-                                            <img src="images/assets/19.jpg" alt="" />
+                                        <!--a href="images/assets/0055.jpg" rel="pf_item" class="work_image" title="Project name">
+                                            <img src="images/assets/19.jpg" alt="" /-->
                                         </a>
-                                        <h3>Project title</h3>
-                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p>
+                                        <!--h3>Project title</h3>
+                                        <p>Curabitur et velit nisl. Donec semper egestas blandit. Etiam ultrices dolor fermentum elit laoreet vitae hendrerit tortor vulputate.</p-->
                                     </div>
                                     <div class="clear"></div>
                                     <!--======= THIRD ROW ========-->
