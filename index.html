@@ -302,22 +302,17 @@
         if (loc === "")
             loc = "xxx";
         var data = {
-<<<<<<< HEAD
+
             "beverageID": bevid,
             "rating": 5,
             "personName": "fred", //name,
             "locationName": loc
-=======
-            beverageId: bevid,
-            rating: 5,
-            personName: name,
-            location: "xxx"
->>>>>>> origin/master
+
         };
 
 
         var jsonData = JSON.stringify(data);
-        var url = '@Href("http://boozr.azurewebsites.net/RateBeverage.asmx/Rate")';
+        var url = 'http://boozr.azurewebsites.net/RateBeverage.asmx/Rate")';
 
         $.ajax({
             type: "POST",
