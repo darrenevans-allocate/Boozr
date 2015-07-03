@@ -302,7 +302,6 @@
         if (loc === "")
             loc = "xxx";
         var data = {
-
             "beverageID": bevid,
             "rating": 5,
             "personName": "fred", //name,
@@ -312,7 +311,7 @@
 
 
         var jsonData = JSON.stringify(data);
-        var url = 'http://boozr.azurewebsites.net/RateBeverage.asmx/Rate")';
+        var url = 'http://boozr.azurewebsites.net/RateBeverage.asmx/Rate';
 
         $.ajax({
             type: "POST",
